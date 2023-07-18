@@ -100,11 +100,12 @@ class TitleState extends MusicBeatState
 		}
 		persistentUpdate = true;
 
-		logoBl = new FlxSprite(-150, -100);
+		logoBl = new FlxSprite(0, 0);
 		logoBl.frames = FlxAtlasFrames.fromSparrow('assets/images/menu_assets/logoBumpin.png', 'assets/images/menu_assets/logoBumpin.xml');
 		logoBl.antialiasing = true;
 		logoBl.animation.addByPrefix('bump', 'logo bumpin', 24);
 		logoBl.animation.play('bump');
+		logoBl.scale.set(0.75, 0.75);
 		logoBl.updateHitbox();
 
 		gfDance = new FlxSprite(FlxG.width * 0.4, FlxG.height * 0.07);
